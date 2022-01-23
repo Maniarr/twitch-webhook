@@ -9,5 +9,6 @@ services:
       - TWITCH_HMAC_SECRET=password
       - LISTEN_ADDRESS=0.0.0.0:8011
       - PULSAR_URL=pulsar://192.168.122.153:6650
+      - RUST_LOG=info
     ports:
       - 8011:8011
