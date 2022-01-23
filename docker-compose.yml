@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  webhook:
+    build:
+      context: webhook
+    restart: on-failure
+    environment:
+      - TWITCH_HMAC_SECRET=password
+      - LISTEN_ADDRESS=0.0.0.0:8011
+      - PULSAR_URL=pulsar://192.168.122.153:6650
+    ports:
+      - 8011:8011
